@@ -12,7 +12,8 @@ public class Facebooklogin {
 		driver.get("https://en-gb.facebook.com");
 		 driver.manage().window().maximize();
 		 driver.findElement(By.linkText("Create new account")).click();
-		 driver.findElement(By.id("u_2_b_YB")).sendKeys("testleaf");
+		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		 driver.findElement(By.name("firstname")).sendKeys("testleaf");
 		 driver.findElement(By.name("lastname")).sendKeys("Test");
 		 driver.findElement(By.name("reg_email__")).sendKeys("testleaf.2023@gmail.com");
 		 driver.findElement(By.id("password_step_input")).sendKeys("passwordtest");
